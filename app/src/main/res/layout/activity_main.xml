@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/preencha_dados_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preencha os dados"
+            android:textSize="35sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nome_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/preencha_dados_tv" />
+
+        <EditText
+            android:id="@+id/sobrenome_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sobrenome"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_et" />
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sobrenome_et" />
+
+        <TextView
+            android:id="@+id/estado_civil_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado civil"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_et" />
+
+        <Spinner
+            android:id="@+id/estado_civil_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:entries="@array/estado_civil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/estado_civil_tv" />
+
+        <LinearLayout
+            android:id="@+id/conjuge_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/estado_civil_sp" >
+
+            <EditText
+                android:id="@+id/nome_conjuge_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do cônjuge"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:layout_margin="5dp" />
+
+            <EditText
+                android:id="@+id/sobrenome_conjuge_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sobrenome do cônjuge"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sexo_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conjuge_ll" />
+
+        <RadioGroup
+            android:id="@+id/sexo_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sexo_tv" >
+
+            <RadioButton
+                android:id="@+id/masculino_rb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Masculino"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/feminino_rb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Feminino" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/salvar_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sexo_rg" />]
+
+        <Button
+            android:id="@+id/limpar_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Limpar"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salvar_bt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
